@@ -1,0 +1,109 @@
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #89f7fe, #66a6ff);
+            color: #333;
+            overflow: hidden;
+        }
+
+        .stopwatch {
+            background: linear-gradient(135deg, #ffffff, #e3e3e3);
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            padding: 30px;
+            width: 400px;
+            text-align: center;
+            position: relative;
+        }
+
+        .time {
+            font-size: 3.5em;
+            margin: 20px 0;
+            font-weight: bold;
+            color: #444;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            gap: 10px;
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.3s;
+            background: #66a6ff;
+            color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            background: #5595f0;
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        #lap {
+            margin-top: 10px;
+            background: #ffcc00;
+            color: #333;
+        }
+
+        #lap:hover {
+            background: #e6b800;
+        }
+
+        .laps {
+            margin-top: 30px;
+            max-height: 200px;
+            overflow-y: auto;
+            text-align: left;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            background: #f9f9f9;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .lap {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            font-size: 1em;
+            color: #555;
+        }
+
+        .lap:last-child {
+            border-bottom: none;
+        }
+
+        .stopwatch::after {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            border-radius: 50%;
+        }
